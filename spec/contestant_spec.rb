@@ -1,5 +1,4 @@
 require 'rspec'
-require './lib/game'
 require './lib/contestant'
 
 RSpec.describe Contestant do
