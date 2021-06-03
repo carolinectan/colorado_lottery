@@ -4,9 +4,9 @@ class ColoradoLottery
               :current_contestants
 
   def initialize
-    @registered_contestants = Hash.new
+    @registered_contestants = {}
     @winners = []
-    @current_contestants = Hash.new
+    @current_contestants = {}
   end
 
   def interested_and_18?(contestant, game)
@@ -18,7 +18,7 @@ class ColoradoLottery
   end
 
   def can_register?(contestant, game)
-    if interested_and_18?(contestant, game) == true
+    if self.interested_and_18?(contestant, game) == true
       true
     else
       false
