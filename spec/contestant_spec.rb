@@ -33,7 +33,7 @@ RSpec.describe Contestant do
     expect(@alexander.game_interests).to eq([])
   end
 
-  xit 'can add game interests' do
+  it 'can add game interests' do
     @alexander.add_game_interest('Mega Millions')
     @alexander.add_game_interest('Pick 4')
 
