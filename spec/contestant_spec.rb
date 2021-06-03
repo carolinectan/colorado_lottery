@@ -18,13 +18,11 @@ RSpec.describe Contestant do
   it 'initializes with attributes' do
     expect(@alexander.first_name).to eq('Alexander')
     expect(@alexander.last_name).to eq('Aigiades')
+    expect(@alexander.full_name).to eq('Alexander Aigiades')
     expect(@alexander.age).to eq(28)
     expect(@alexander.state_of_residence).to eq('CO')
     expect(@alexander.spending_money).to eq(10)
-  end
-
-  it 'can return the full name' do
-    expect(@alexander.full_name).to eq('Alexander Aigiades')
+    expect(@alexander.game_interests).to eq([])
   end
 
   it 'can determine if the contestant is out of state' do
@@ -35,7 +33,7 @@ RSpec.describe Contestant do
     expect(@alexander.game_interests).to eq([])
   end
 
-  it 'can add game interests' do
+  xit 'can add game interests' do
     @alexander.add_game_interest('Mega Millions')
     @alexander.add_game_interest('Pick 4')
 
