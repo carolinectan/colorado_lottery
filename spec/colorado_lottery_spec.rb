@@ -57,6 +57,13 @@ RSpec.describe ColoradoLottery do
   end
 
   it 'can determine if a contestant is eligible to register' do
+    @alexander.add_game_interest('Pick 4')
+    @alexander.add_game_interest('Mega Millions')
+    @frederick.add_game_interest('Mega Millions')
+    @winston.add_game_interest('Cash 5')
+    @winston.add_game_interest('Mega Millions')
+    @benjamin.add_game_interest('Mega Millions')
+
     expect(@lottery.can_register?(@alexander, @pick_4)).to eq(true)
     expect(@lottery.can_register?(@alexander, @cash_5)).to eq(false)
     expect(@lottery.can_register?(@frederick, @mega_millions)).to eq(true)
