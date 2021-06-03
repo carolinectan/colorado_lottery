@@ -116,7 +116,7 @@ it 'can register contestants' do
     expect(@lottery.registered_contestants).to eq(expected)
   end
 
-  it 'can return eligible contestants' do
+  xit 'can return eligible contestants' do
     @lottery.register_contestant(@alexander, @pick_4)
     @lottery.register_contestant(@alexander, @mega_millions)
     @lottery.register_contestant(@frederick, @mega_millions)

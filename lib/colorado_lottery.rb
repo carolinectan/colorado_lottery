@@ -4,9 +4,9 @@ class ColoradoLottery
               :current_contestants
 
   def initialize
-    @registered_contestants = {}
+    @registered_contestants = Hash.new
     @winners = []
-    @current_contestants = {}
+    @current_contestants = Hash.new
   end
 
   def interested_and_18?(contestant, game)
@@ -24,4 +24,16 @@ class ColoradoLottery
       false
     end
   end
+
+  def register_contestant(contestant, game)
+    contestant.add_game_interest(game)
+
+    @registered_contestants = Hash.new do |hash, key|
+        hash[key] = []
+
+    end
+    @registered_contestants[game.name] << contestant
+    @registered_contestants
+  end
+
 end
