@@ -1,6 +1,5 @@
 require 'rspec'
 require "./lib/game"
-require "./lib/contestant"
 
 RSpec.describe Game do
   before :each do
